@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>trail</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body style="padding-left: 35%;">
+  <div class="card" style="border-radius:20px;">
+    <h1 style="margin-right:6%;">Personal Details</h1>
+    <pre></pre>
+    <!-- <form [formGroup]="personal Details" (ngSubmit)="personal Details()"> -->
+    <!-- <div class="form-group"> -->
+    <!-- <form action="/action_page.php" target="_blank" novalidate> -->
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+      <h2 style="font-size:medium;">
+        <div class="form-group row" style="padding-left: 20%;">
+          <div class="row-sm 5">
+                   <!-- name -->
+            <div>
+              <label for="Name">Full Name:</label><br>
+
+              <input type="text" (keypress)="keyPressNumbers($event)" pattern="[a-zA-Z.][a-zA-Z.]+$" required
+                #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control align"
+                style="margin-left:-1%" placeholder="enter your full name" id="name" name="name" ngModel>
+              <div *ngIf="name.invalid &&(name.touched || name.dirty)" class="form-text text-danger">enter your name
+              </div><br>
+            </div>
+            <!-- <small class="text-danger " *ngIf="f['FirstName'].errors?.['required'] && f['FirstName'].touched">FirstName
+              is required</small>
+            <small class="text-danger " *ngIf="f['FirstName'].errors?.['minlength'] && f['FirstName'].touched">FirstName
+              must be atleast of 3
+              character</small> -->
+
+                    <!-- age -->
+            <div>
+              <label for="age">Age:</label><br>
+              <input type="text" maxlength="3" name="age" id="age" pattern="[0-9]+$" required #age="ngModel"
+                [class.is-invalid]="age.invalid && age.touched" class="form-control align" style="margin-left: -1%"
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="enter your age" ngModel>
+              <div *ngIf="age.invalid &&(age.touched || age.dirty)" class="form-text text-danger">enter your age</div>
+              <br>
+            </div>
+                    
+                             <!-- contact nunber -->
+            <div>
+              <label for="contact">Contact Number:</label><br>
+              <input type="text" name="contact" id="contact" pattern="[0-9]+$" required #contact="ngModel"
+                [class.is-invalid]="contact.invalid && contact.touched" class="form-control align"
+                style="margin-left: -1%" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                placeholder="enter your number" ngModel>
+              <div *ngIf="contact.invalid &&(contact.touched || contact.dirty)" class="form-text text-danger">enter your
+                contact number </div><br>
+            </div>
+
+                          <!-- email -->
+            <div>
+              <label for="email">E-Mail ID:</label><br>
+              <input type="email" id="email" name="email" class="form-control align "
+                pattern="[a-zA-Z0-9_.%+-]+@[a-z]+.[com,in,edu{2,3}]+$" required #email="ngModel"
+                [class.is-invalid]="email.invalid && email.touched" style="margin-left: -1%" placeholder="enter your id"
+                ngModel>
+              <div *ngIf="email.invalid &&(email.touched || email.dirty)" class="form-text text-danger">enter your email
+                id</div><br>
+            </div>
+                            <!-- gender -->
+            <div>
+              <label for="gender">Gender:</label>
+              <select id="gender" name="gender"class="form-control align"style="margin-left:-1%" pattern="[a-zA-Z.][a-zA-Z.]+$" required
+              #gender="ngModel" [class.is-invalid]="gender.invalid && gender.touched"ngModel >
+                <option selected>Choose the gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="other">other</option>
+              </select>
+              <div *ngIf="gender.invalid &&(gender.touched || gender.dirty)" class="form-text text-danger">Choose your
+                gender</div><br>
+            </div>
+          </div>
+        </div>
+      </h2>
+      <!--p id="demo">After filling the Form Kindly Submit it</p>
+          <button onclick='document.getElementById("demo").innerHTML = "Submitted "'>Submit</button><br-->
+      <h3>
+        <pre></pre>
+        <div class="text-align">
+          <div class="align-centre">
+            <input type="submit" value="Submit" class="btn btn-primary align">
+
+            <input type="reset" style="margin-left: 4%;" value="Reset" class="btn btn-primary align"><br>
+
+          </div>
+        </div>
+      </h3>
+
+    </form>
+  </div>
+</body>
+<!-- 
+  <address>
+      Contact Us : <a href="mailto:ganesh.b.2018.ece@ritchennai.edu.in">Ganesh.B</a>.<br> 
+      Visit us at:Elait IT<br>
+      <a href="http://elait.com/">Elait.com</a>.<br>
+  </address -->
+
+</html>-->
+<!-- <div class="form-group row g-3">
+
+  <div style="margin-left:29% ;" class="col-md-2">
+
+<button [disabled]="loginForm.invalid" type="submit"  class="btn btn-primary">Submit</button><pre></pre>
+
+</div>
+[class.is-invalid]="name.invalid && name.touched"
+<div style="margin-left:0% ;" class="col-md-2">
+
+<input class="btn btn-primary" type="reset" value="Reset">
+pattern='^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-.]+\.["com""in"]+$' required 
+[class.is-invalid]="f['name'].invalid && f['name'].touched"-->
