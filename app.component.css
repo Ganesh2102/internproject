@@ -1,54 +1,58 @@
 .form-control{      
-  text-align: center;      
-  width: 200px;      
-  height: 40px;      
-  color: hwb(283 1% 56%);      
-  border-color: rgb(187, 121, 340);      
-  border-radius: 130px;      
-} 
-.text{      
-  text-align: center;      
-  font-size: x-large;      
-}      
-.container{      
-  padding: center;       
-}
-  /*body {
-  text-align: center;
-  background-color: lightblue;
-  border-radius: 25px;
-  border: 2px solid red;
-  padding: 50px;
-  width: 800px;
-  height: 800px;
-        
-    }
-    */
-    body{
-      background-color: rgb(165, 166, 167);
-      width: 2000px;
-      height: 1080px;
-      padding-top: 50px;
+    text-align: center;      
+    width: 200px;      
+    height: 40px;      
+    color: hwb(283 1% 56%);      
+    border-color: rgb(187, 121, 340);      
+    border-radius: 130px;      
+  } 
+  .text{      
+    text-align: center;      
+    font-size: x-large;      
+  }      
+  .container{      
+    padding: center;       
+  }
 
-    }
-    .card{
-      background-color:skyblue;
-      padding: -10px;
-      width: 600px;
-      height: 700px;
-    }
+      head{
+        background-color: rgb(206, 206, 206);
+      }
+      body{
+        background-color: rgb(206, 206, 206);
+        width: 2000px;
+        height: 1350px;
+        padding-top: 50px;
   
-    h1 {
-      color: rgb(24, 27, 226);
-      text-align: center;
-    }
+      }
+      .card{
+        background-color:skyblue;
+        padding: -10px;
+        width: 600px;
+        height: 1250px;
+      }
     
-    p {
-      font-family: verdana;
-      font-size: 20px;
+      h1 {
+        color: rgb(24, 27, 226);
+        text-align: center;
+      }
       
-    }
-    .align{
-      margin-left: 40%;
-    }
+      p {
+        font-family: verdana;
+        font-size: 20px;
+        
+      }
+      .align{
+        margin-left: 40%;
+      }
+      p::after{
+
+        color: #d00;
     
+        content: "*";
+    
+        position: absolute;
+    
+    }
+    input{
+        font-style: italic;
+    }

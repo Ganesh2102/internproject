@@ -6,30 +6,44 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  title = 'educational-form';
 
-  keyPressNumbers(event: { which: any; keyCode: any; preventDefault: () => void; }) {
 
-    var charCode = (event.which) ? event.which : event.keyCode;
+  // keyPressNumbers(event: { which: any; keyCode: any; preventDefault: () => void; }) {
 
-    // Only Numbers 0-9
+  //   var charCode = (event.which) ? event.which : event.keyCode;
 
-    if ((charCode < 65 || charCode > 122) || charCode==32) {
+  //   // Only Numbers 0-9
 
-      event.preventDefault();
+  //   if ((charCode < 65 || charCode > 122) || charCode==32) {
 
-      return false;
+  //     event.preventDefault();
 
-    } else {
+  //     return false;
 
-      return true;
+  //   } else {
 
-    }
+  //     return true;
 
-  }
+  //   }
+
+  // }
   onSubmit(value: any) {
 
     console.log(value);
 
   }
+  forschool(event:any)
+{
+  if(event.charCode>=48 && event.charCode<=57 && event.charCode==32)
+  {
+    return false;
+  }
+  else{
+    return true;
+  }
 }
+}
+
+
+
